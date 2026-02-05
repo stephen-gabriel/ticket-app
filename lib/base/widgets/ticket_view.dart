@@ -38,7 +38,7 @@ class TicketView extends StatelessWidget {
                   child: Stack(
                     children: [
                       SizedBox(child: AppLayoutBuilderWidget()),
-                      Center(child: Text("Plane")),
+                      Center(child: Text("Plane-Icon")),
                     ],
                   ),
                 ),
