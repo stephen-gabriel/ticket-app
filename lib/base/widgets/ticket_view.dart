@@ -38,18 +38,27 @@ class TicketView extends StatelessWidget {
                   child: Stack(
                     children: [
                       SizedBox(
+                        height: 24,
                         child: AppLayoutBuilderWidget(
                           randomDivider: 6,
                         ),
                       ),
-                      Center(child: Text("Plane")),
+                      Center(
+                        child: Transform.rotate(
+                          angle: 1.6,
+                          child: Icon(
+                            Icons.local_airport_rounded,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
                 const BigDot(),
                 Expanded(child: Container()),
                 Text(
-                  "NYC",
+                  "LDN",
                   style: AppStyles.headLineStyle3.copyWith(
                     color: Colors.white,
                   ),
