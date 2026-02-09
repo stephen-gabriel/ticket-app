@@ -122,67 +122,22 @@ class TicketView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       AppColumnTextLayout(
+                        alignment: CrossAxisAlignment.start,
                         topText: "1 May",
                         bottomText: "DATE",
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          TextStyleThird(text: "1 May"),
-                          SizedBox(height: 5),
-                          TextStyleFourth(text: "DATE"),
-                        ],
+                      AppColumnTextLayout(
+                        alignment: CrossAxisAlignment.center,
+                        topText: "08:00 AM",
+                        bottomText: "DEPARTURE TIME",
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          TextStyleThird(text: "1 May"),
-                          SizedBox(height: 5),
-                          TextStyleFourth(text: "DATE"),
-                        ],
+                      AppColumnTextLayout(
+                        alignment: CrossAxisAlignment.end,
+                        topText: "23",
+                        bottomText: "Number",
                       ),
-                      // Expanded(child: Container()),
-                      // Text(
-                      //   "08:00 AM",
-                      //   style: AppStyles.headLineStyle3.copyWith(
-                      //     color: Colors.white,
-                      //   ),
-                      // ),
-                      // Expanded(child: Container()),
-                      // Text(
-                      //   "23",
-                      //   style: AppStyles.headLineStyle3.copyWith(
-                      //     color: Colors.white,
-                      //   ),
-                      // ),
                     ],
                   ),
-                  SizedBox(height: 3),
-                  //show departure and destination names with time
-                  /*Row(
-                    children: [
-                      Text(
-                        "Date",
-                        style: AppStyles.headLineStyle3.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      Expanded(child: Container()),
-                      Text(
-                        "Departure Time",
-                        style: AppStyles.headLineStyle3.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      Expanded(child: Container()),
-                      Text(
-                        "Number",
-                        style: AppStyles.headLineStyle3.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),*/
                 ],
               ),
             ),
