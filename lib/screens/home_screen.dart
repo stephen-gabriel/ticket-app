@@ -22,6 +22,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 40),
                 AppDoubleText(
                   bigText: "Upcoming Flights",
                   smallText: "View all",
@@ -87,6 +88,7 @@ class HomeScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: ticketList
+                        .take(2)
                         .map(
                           (singleTicket) =>
                               TicketView(ticket: singleTicket),
@@ -94,13 +96,23 @@ class HomeScreen extends StatelessWidget {
                         .toList(),
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 40),
                 AppDoubleText(
                   bigText: "Hotels",
                   smallText: "View all",
                   func: () {},
                 ),
-                Hotel(),
+                const SizedBox(height: 20),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: hotelList
+                        .map(
+                          (singleHotel) => Hotel(hotel: singleHotel),
+                        )
+                        .toList(),
+                  ),
+                ),
               ],
             ),
           ),
