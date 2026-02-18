@@ -36,7 +36,7 @@ class SearchScreen extends StatelessWidget {
           ),
           SizedBox(height: 25),
           FindTickets(),
-          SizedBox(height: 44),
+          SizedBox(height: 40),
           AppDoubleText(
             bigText: "Upcoming Flights",
             smallText: "View all",
