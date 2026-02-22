@@ -23,7 +23,7 @@ class TicketView extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return SizedBox(
       width: size.width * 0.85,
-      height: 189,
+      height: 180,
       child: Container(
         margin: EdgeInsets.only(right: wholeScreen ? 0 : 16),
         child: Column(
@@ -136,10 +136,16 @@ class TicketView extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: AppStyles.ticketOrange,
+                color: isColor == null
+                    ? AppStyles.ticketOrange
+                    : AppStyles.ticketColor,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(21),
-                  bottomRight: Radius.circular(21),
+                  bottomLeft: Radius.circular(
+                    isColor == null ? 21 : 0,
+                  ),
+                  bottomRight: Radius.circular(
+                    isColor == null ? 21 : 0,
+                  ),
                 ),
               ),
               child: Column(
@@ -149,16 +155,19 @@ class TicketView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       AppColumnTextLayout(
+                        isColor: isColor,
                         alignment: CrossAxisAlignment.start,
                         topText: ticket["date"],
                         bottomText: "DATE",
                       ),
                       AppColumnTextLayout(
+                        isColor: isColor,
                         alignment: CrossAxisAlignment.center,
                         topText: ticket["departure_time"],
-                        bottomText: "DEPARTURE TIME",
+                        bottomText: "Departure time",
                       ),
                       AppColumnTextLayout(
+                        isColor: isColor,
                         alignment: CrossAxisAlignment.end,
                         topText: ticket["number"].toString(),
                         bottomText: "Number",
