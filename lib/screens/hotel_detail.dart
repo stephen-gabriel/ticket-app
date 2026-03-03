@@ -106,7 +106,7 @@ class _HotelDetailState extends State<HotelDetail> {
                   itemCount: 10,
                   itemBuilder: (context, index) {
                     return Container(
-                      margin: EdgeInsets.all(8),
+                      margin: EdgeInsets.all(9),
                       child: Image.network(
                         "http://via.placeholder.com/200x150",
                       ),
