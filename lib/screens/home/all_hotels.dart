@@ -54,7 +54,7 @@ class HotelGridView extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(
           context,
-          AppRoutes.hotelDetail,
+          AppRoutes.hotelDetail,    
           arguments: {"index": index},
         );
       },
